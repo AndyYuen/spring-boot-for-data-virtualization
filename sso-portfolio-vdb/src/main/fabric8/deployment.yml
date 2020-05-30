@@ -1,0 +1,14 @@
+spec:
+  template:
+    spec:
+      containers:
+        - volumeMounts:
+            - name: secrets
+              mountPath: /mnt/secrets
+      volumes:
+        - name: secrets
+          secret:
+            secretName: "sslsecrets"
+            items:
+              - key: keystore.jks
+                path: keystore.jks

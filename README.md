@@ -21,8 +21,9 @@ Folders include:
 You have to use the Catalog from the Openshift Console to set up a PostgreSQL instance with:
 - Database Service Name: postgresql
 - PostgreSQL Connection Username: user
-- PostgreSQL Connection Password: password
+- PostgreSQL Connection Password: mypassword
 - PostgreSQL Database Name: sampledb
+
 and initialise the sampldb with the sql script: accounts-schema.sql.
 
 ## 3 VDB Deployment on Openshift

@@ -72,7 +72,7 @@ Use the following command from a browser:
 YourVdbROute/odata/portfolio/StockPrice('IBM')
 YourVdbROute/odata/portfolio/StockPrice('IBM')/price/$value
 YourVdbROute/odata/portfolio/StockPrice('IBM')?$format=json
-YourVdbROuteodata/portfolio/CustomerHoldings('Doe')
+YourVdbROuteodata/portfolio/CustomerHoldings?$filter=LastName eq 'Doe'&$format=json
 YourVdbROute/odata/Portfolio/AccountValues?$top=5&$format=json
 YourVdbROute/odata/portfolio/AccountValues('Doe')?$format=json
 </pre>
@@ -82,7 +82,7 @@ Login with two different browsers using 2 different users (one with ReadRole and
 ## 6 VDB interaction using JDBC
 I am using the Squirrel SQL client in my demo. You may use other SQL clients of your choosing. If you should want to use Squirrel SQL client, here is the link to the official site: http://squirrel-sql.sourceforge.net
 
-From the Squirrel SQL Client, install the Teiid JDBC driver and set up 2 aliases with different users (one with ReadRole and the other with StockRole) and set the URL to: jdbc:teiid:portfolio@mm://127.0.0.1:31000
+From the Squirrel SQL Client, install the Teiid JDBC driver with Class Name: **org.teiid.jdbc.TeiidDriver** and set up 2 aliases with different users (one with ReadRole and the other with StockRole) and set the URL to: jdbc:teiid:portfolio@mm://127.0.0.1:31000
 
 Login to Openshift and make sure you are on the correct project:
 <pre>

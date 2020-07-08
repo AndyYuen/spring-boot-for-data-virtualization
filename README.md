@@ -47,7 +47,7 @@ Using project "dv-demo".
 Change to the "sso-portfolio-vdb" directory. Create a secret containing the keystore for using SSL and a configmap containing the application.properties file. And then deploy the application.
 <pre>
 oc create secret generic sslsecret --from-file=src/main/resources/keystore.jks
-oc create configmap image-service --from-file=src/main/resources/application.properties
+oc create configmap portfolio-vdb --from-file=src/main/resources/application.properties
 mvn clean -P openshift fabric8:deploy
 </pre>
 
